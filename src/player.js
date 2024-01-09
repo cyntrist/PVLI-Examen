@@ -173,6 +173,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
         if (this.anims.currentAnim.key !== anim) {
             this.anims.play(anim);
         }
+    }
 
+    win() {
+        this.animate(this.winAnim);
+    }
+
+    lose() {
+        this.animate(this.loseAnim);
     }
 }

@@ -77,7 +77,7 @@ export default class Level extends Phaser.Scene {
             this.player2 = new Player(this, 156, 172, 2);
         }
         else {
-            this.enemy = new Enemy(this, 156, 172);
+            this.player2 = new Enemy(this, 156, 172);
         }
 
 
@@ -112,6 +112,8 @@ export default class Level extends Phaser.Scene {
                 color: 'blue'
             }).setOrigin(0.5, 0.5).setStroke('white', 2);
             this.winSfx.play();
+            this.player.win();
+            this.player2.lose();
             this.endGame();
         }, this)
 
@@ -123,6 +125,8 @@ export default class Level extends Phaser.Scene {
                 color: 'blue'
             }).setOrigin(0.5, 0.5).setStroke('white', 2);
             this.loseSfx.play();
+            this.player.lose();
+            this.player2.win();
             this.endGame();
         }, this)
 
@@ -168,7 +172,7 @@ export default class Level extends Phaser.Scene {
             }, null, this);
         }
 
-        
+
         this.upside = this.checkNumber(this.upsideCollider);
         this.downside = this.checkNumber(this.downsideCollider);
         

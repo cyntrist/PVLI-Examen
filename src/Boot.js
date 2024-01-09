@@ -115,7 +115,7 @@ export default class Boot extends Phaser.Scene {
             repeat: -1
         });
         this.anims.create({
-            key: 'ratLoose',
+            key: 'ratLose',
             frames: this.anims.generateFrameNumbers('rat', {start:11, end:12}),
             frameRate: 5,
             repeat: -1
@@ -158,7 +158,7 @@ export default class Boot extends Phaser.Scene {
             repeat: -1
         });
         this.anims.create({
-            key: 'penguinLoose',
+            key: 'penguinLose',
             frames: this.anims.generateFrameNumbers('penguin', {start:8, end:8}),
             frameRate: 5,
             repeat: -1
